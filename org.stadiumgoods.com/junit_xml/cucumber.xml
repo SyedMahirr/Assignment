@@ -8,10 +8,10 @@ And User Clicks Login Button................................................skip
 Then User Successfully lands on the Home Page...............................skipped
 
 StackTrace:
-java.lang.NullPointerException
-	at com.stadiumgood.utils.TestUtil.getCellContent(TestUtil.java:173)
-	at com.stadiumgood.stepdefination.Loging.user_Enters_User_Name(Loging.java:28)
-	at ✽.When User Enters User Name(BrowserInvoke.feature:6)
+java.lang.NullPointerException
+	at com.stadiumgood.utils.TestUtil.getCellContent(TestUtil.java:173)
+	at com.stadiumgood.stepdefination.Loging.user_Enters_User_Name(Loging.java:28)
+	at ✽.When User Enters User Name(BrowserInvoke.feature:6)
 ]]></failure>
 </testcase>
 </testsuite>
