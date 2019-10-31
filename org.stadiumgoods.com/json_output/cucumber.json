@@ -1,0 +1,86 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "launch Browser",
+        "description": "",
+        "id": "login-into-the-application;launch-browser",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 15891115700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User Launches Browser",
+            "match": {
+              "location": "Loging.user_Launches_Browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5572300,
+              "error_message": "java.lang.NullPointerException\r\n\tat com.stadiumgood.utils.TestUtil.getCellContent(TestUtil.java:173)\r\n\tat com.stadiumgood.stepdefination.Loging.user_Enters_User_Name(Loging.java:28)\r\n\tat ✽.When User Enters User Name(BrowserInvoke.feature:6)\r\n",
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "User Enters User Name",
+            "match": {
+              "location": "Loging.user_Enters_User_Name()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "User Enters Password",
+            "match": {
+              "location": "Loging.user_Enters_Password()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "User Clicks Login Button",
+            "match": {
+              "location": "Loging.user_Clicks_Login_Button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "User Successfully lands on the Home Page",
+            "match": {
+              "location": "Loging.user_Successfully_lands_on_the_Home_Page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 2,
+            "name": "@invokeBrowser"
+          }
+        ]
+      }
+    ],
+    "name": "Login into the Application",
+    "description": "",
+    "id": "login-into-the-application",
+    "keyword": "Feature",
+    "uri": "BrowserInvoke.feature"
+  }
+]

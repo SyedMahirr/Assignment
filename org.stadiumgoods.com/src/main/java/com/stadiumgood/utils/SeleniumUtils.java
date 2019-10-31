@@ -1,0 +1,56 @@
+package com.stadiumgood.utils;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.stadiumgoods.driver.Driver;
+
+import com.stadiumgood.*;
+import com.stadiumgood.reports.*;
+import com.stadiumgood.utils.*;
+
+public class SeleniumUtils {
+
+	
+	public static void click(WebElement element)  {
+		highlightElement(element);
+		element.click();
+		LogStatus.pass("Clicking is successfull on "+ element);
+		LogStatus.pass("Screenshot below", TestUtil.pullScreenshotPath());
+	}
+
+
+
+	public static void sendkeys(WebElement element, String text)  {
+		highlightElement(element);
+		element.sendKeys(text);
+		LogStatus.pass(text + " is entered in to the "+ element);
+		LogStatus.pass(text + " is entered in to the "+ element, TestUtil.pullScreenshotPath());
+		
+	}
+
+	public static void highlightElement(WebElement element) {
+		((JavascriptExecutor)Driver.driver).executeScript("arguments[0].style.border='3px solid red'", element);
+	}
+
+	public static boolean isVisible(WebElement element) {
+		boolean flag=false;
+		Driver.driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		try
+		{
+			if(element.isDisplayed())
+			{
+				flag=true;
+			}
+		}
+		catch (Exception e) {
+
+		}
+		return flag;
+	}
+
+	
+	
+	
+}
