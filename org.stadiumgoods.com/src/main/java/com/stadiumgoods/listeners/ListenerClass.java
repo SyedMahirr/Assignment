@@ -14,12 +14,12 @@ import com.stadiumgood.utils.TestUtil;
  * Listener class which is implementing ITestListener and hence we can use this to dynamically create reports, write logs.
  */
 public class ListenerClass implements ITestListener{
-	public static String TestcaseName;
+	public static String TestCaseName;
 
 	public void onTestStart(ITestResult result) {
-		TestcaseName =result.getMethod().getDescription();
-		ExtentReport.logger=ExtentReport.report.startTest(TestcaseName);
-		LogStatus.pass("Test Case "+TestcaseName+ " is started successfully");
+		TestCaseName =result.getMethod().getDescription();
+		ExtentReport.logger=ExtentReport.report.startTest(TestCaseName);
+		LogStatus.pass("Test Case "+TestCaseName+ " is started successfully");
 		
 	}
 

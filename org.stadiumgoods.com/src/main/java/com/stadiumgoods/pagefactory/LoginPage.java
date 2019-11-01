@@ -25,9 +25,9 @@ public class LoginPage {
 		PageFactory.initElements(Driver.driver, this);
 	}
 	public  HomePage login() {
-		System.out.println(TestUtil.getCellContent("TestData", ListenerClass.TestcaseName, "username"));
-		SeleniumUtils.sendkeys(txtbox_username,TestUtil.getCellContent("TestData", ListenerClass.TestcaseName, "username"));
-		SeleniumUtils.sendkeys(txtbox_password,TestUtil.getCellContent("TestData", ListenerClass.TestcaseName, "password"));
+		System.out.println(TestUtil.getCellContent("TestData", ListenerClass.TestCaseName, "username"));
+		SeleniumUtils.sendkeys(txtbox_username,TestUtil.getCellContent("TestData", ListenerClass.TestCaseName, "username"));
+		SeleniumUtils.sendkeys(txtbox_password,TestUtil.getCellContent("TestData", ListenerClass.TestCaseName, "password"));
 		SeleniumUtils.click(btn_login);
 		return new HomePage();
 	}

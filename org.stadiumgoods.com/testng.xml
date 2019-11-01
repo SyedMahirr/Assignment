@@ -10,6 +10,7 @@
     <classes>
       <class name="com.stadiumgood.stepdefination.Loging"/>
       
+      <class name = "com.stadiumgood.utils.TestUtils" </>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

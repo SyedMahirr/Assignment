@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.stadiumgoods.driver.Driver;
 
+import com.stadiumgood.reports.ExcelSheetReader;
 
 import com.stadiumgood.utils.*;
 import com.stadiumgoods.listeners.ListenerClass;
@@ -25,9 +26,13 @@ public class Loging extends Driver {
 	
 	@When("^User Enters User Name$")
 	public void user_Enters_User_Name() throws Throwable {
-		System.out.println(TestUtil.getCellContent("TestData", ListenerClass.TestcaseName, "username"));
-	WebElement ele = 	driver.findElement(By.name("username"));
-	SeleniumUtils.sendkeys(ele ,TestUtil.getCellContent("TestData", ListenerClass.TestcaseName, "username"));
+
+		ExcelSheetReader td = new ExcelSheetReader();
+	
+		System.out.println(	td.enterUserName("TestData", 1));
+		driver.findElement(By.xpath("//*[@aria-label='Search']")).sendKeys(td.enterUserName("TestData", 1));
+		
+		//.sendKeys(td.enterUserName("TestData", 7));
 	
 	}
 
