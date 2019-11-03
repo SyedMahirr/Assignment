@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 15891115700,
+              "duration": 12598355500,
               "status": "passed"
             },
             "line": 5,
@@ -24,9 +24,8 @@
           },
           {
             "result": {
-              "duration": 5572300,
-              "error_message": "java.lang.NullPointerException\r\n\tat com.stadiumgood.utils.TestUtil.getCellContent(TestUtil.java:173)\r\n\tat com.stadiumgood.stepdefination.Loging.user_Enters_User_Name(Loging.java:28)\r\n\tat ✽.When User Enters User Name(BrowserInvoke.feature:6)\r\n",
-              "status": "failed"
+              "duration": 111314900,
+              "status": "passed"
             },
             "line": 6,
             "name": "User Enters User Name",
@@ -37,7 +36,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 20000,
+              "status": "passed"
             },
             "line": 7,
             "name": "User Enters Password",
@@ -48,7 +48,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 40600,
+              "status": "passed"
             },
             "line": 8,
             "name": "User Clicks Login Button",
@@ -59,7 +60,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 46000,
+              "status": "passed"
             },
             "line": 9,
             "name": "User Successfully lands on the Home Page",

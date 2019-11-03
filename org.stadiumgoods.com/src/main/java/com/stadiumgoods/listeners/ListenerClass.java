@@ -7,19 +7,19 @@ import org.testng.ITestResult;
 
 import com.stadiumgood.reports.ExtentReport;
 import com.stadiumgood.reports.LogStatus;
-import com.stadiumgood.utils.TestUtil;
+
 
 
 /*
  * Listener class which is implementing ITestListener and hence we can use this to dynamically create reports, write logs.
  */
 public class ListenerClass implements ITestListener{
-	public static String TestCaseName;
+	public static String TestcaseName;
 
 	public void onTestStart(ITestResult result) {
-		TestCaseName =result.getMethod().getDescription();
-		ExtentReport.logger=ExtentReport.report.startTest(TestCaseName);
-		LogStatus.pass("Test Case "+TestCaseName+ " is started successfully");
+		TestcaseName =result.getMethod().getDescription();
+		ExtentReport.logger=ExtentReport.report.startTest(TestcaseName);
+		LogStatus.pass("Test Case "+TestcaseName+ " is started successfully");
 		
 	}
 
@@ -32,7 +32,6 @@ public class ListenerClass implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		LogStatus.fail(result.getMethod().getDescription()+ " is failed");
 		LogStatus.fail(result.getThrowable().toString());
-		LogStatus.fail("Failed",TestUtil.pullScreenshotPath());
 		ExtentReport.report.endTest(ExtentReport.logger);
 		
 	}

@@ -48,34 +48,5 @@ public class LogStatus {
 		ExtentReport.logger.log(com.relevantcodes.extentreports.LogStatus.WARNING, message);
 	}
 
-	public static void pass(String string, String addScreenCapture) {
-
-		if (ReadPropertyFile.get("PassedStepsScreenshots").equalsIgnoreCase("yes")) {
-			ExtentReport.logger.log(com.relevantcodes.extentreports.LogStatus.PASS, string, ExtentReport.logger
-					.addBase64ScreenShot("data:image/png;base64," + TestUtil.getBase64Image(addScreenCapture)));
-			// ExtentReport.logger.log(com.relevantcodes.extentreports.LogStatus.PASS,
-			// string , ExtentReport.logger.addScreenCapture(addScreenCapture));
-		}
-	}
-
-	public static void fail(String string, String addScreenCapture) {
-
-		if (ReadPropertyFile.get("FailedStepsScreenshots").equalsIgnoreCase("yes")) {
-			ExtentReport.logger.log(com.relevantcodes.extentreports.LogStatus.FAIL, string, ExtentReport.logger
-					.addBase64ScreenShot("data:image/png;base64," + TestUtil.getBase64Image(addScreenCapture)));
-			// ExtentReport.logger.log(com.relevantcodes.extentreports.LogStatus.PASS,
-			// string , ExtentReport.logger.addScreenCapture(addScreenCapture));
-		}
-
-	}
-
-	public static void skip(String string, String addScreenCapture) {
-		if (ReadPropertyFile.get("FailedStepsScreenshots").equalsIgnoreCase("yes")) {
-			ExtentReport.logger.log(com.relevantcodes.extentreports.LogStatus.SKIP, string, ExtentReport.logger
-					.addBase64ScreenShot("data:image/png;base64," + TestUtil.getBase64Image(addScreenCapture)));
-			// ExtentReport.logger.log(com.relevantcodes.extentreports.LogStatus.SKIP,
-			// string, ExtentReport.logger.addScreenCapture(addScreenCapture));
-		}
-
-	}
+	
 }

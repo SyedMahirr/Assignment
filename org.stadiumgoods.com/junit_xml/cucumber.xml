@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="15.896688">
-<testcase classname="Login into the Application" name="launch Browser" time="15.896688">
-<failure message="java.lang.NullPointerException&#13;&#10;&#9;at com.stadiumgood.utils.TestUtil.getCellContent(TestUtil.java:173)&#13;&#10;&#9;at com.stadiumgood.stepdefination.Loging.user_Enters_User_Name(Loging.java:28)&#13;&#10;&#9;at ✽.When User Enters User Name(BrowserInvoke.feature:6)&#13;&#10;"><![CDATA[Given User Launches Browser.................................................passed
-When User Enters User Name..................................................failed
-And User Enters Password....................................................skipped
-And User Clicks Login Button................................................skipped
-Then User Successfully lands on the Home Page...............................skipped
-
-StackTrace:
-java.lang.NullPointerException
-	at com.stadiumgood.utils.TestUtil.getCellContent(TestUtil.java:173)
-	at com.stadiumgood.stepdefination.Loging.user_Enters_User_Name(Loging.java:28)
-	at ✽.When User Enters User Name(BrowserInvoke.feature:6)
-]]></failure>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="12.709777">
+<testcase classname="Login into the Application" name="launch Browser" time="12.709777">
+<system-out><![CDATA[Given User Launches Browser.................................................passed
+When User Enters User Name..................................................passed
+And User Enters Password....................................................passed
+And User Clicks Login Button................................................passed
+Then User Successfully lands on the Home Page...............................passed
+]]></system-out>
 </testcase>
 </testsuite>

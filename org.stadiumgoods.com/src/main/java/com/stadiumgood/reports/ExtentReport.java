@@ -4,11 +4,13 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.stadiumgoods.driver.Driver;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.stadiumgood.utils.ReadPropertyFile;
 
-public class ExtentReport {
+public class ExtentReport extends Driver {
 
 	public static ExtentReports report=null;
 	public static ExtentTest logger=null;
@@ -16,7 +18,7 @@ public class ExtentReport {
 	
 
 	//To avoid external initialization
-	private ExtentReport() {
+	public ExtentReport() {
 		SimpleDateFormat formatter = new SimpleDateFormat("MMddyyyy_ hh_mm_ss");
 		Date date = new Date();
 		String currentDate = formatter.format(date);

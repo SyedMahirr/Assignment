@@ -49,33 +49,35 @@ formatter.match({
   "location": "Loging.user_Launches_Browser()"
 });
 formatter.result({
-  "duration": 15891115700,
+  "duration": 12598355500,
   "status": "passed"
 });
 formatter.match({
   "location": "Loging.user_Enters_User_Name()"
 });
 formatter.result({
-  "duration": 5572300,
-  "error_message": "java.lang.NullPointerException\r\n\tat com.stadiumgood.utils.TestUtil.getCellContent(TestUtil.java:173)\r\n\tat com.stadiumgood.stepdefination.Loging.user_Enters_User_Name(Loging.java:28)\r\n\tat ✽.When User Enters User Name(BrowserInvoke.feature:6)\r\n",
-  "status": "failed"
+  "duration": 111314900,
+  "status": "passed"
 });
 formatter.match({
   "location": "Loging.user_Enters_Password()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 20000,
+  "status": "passed"
 });
 formatter.match({
   "location": "Loging.user_Clicks_Login_Button()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 40600,
+  "status": "passed"
 });
 formatter.match({
   "location": "Loging.user_Successfully_lands_on_the_Home_Page()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 46000,
+  "status": "passed"
 });
 });

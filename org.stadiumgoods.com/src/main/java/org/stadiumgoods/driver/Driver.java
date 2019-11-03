@@ -21,7 +21,7 @@ import com.stadiumgood.reports.*;
 
 public class Driver {
 
-	public static WebDriver driver = null;
+	public static WebDriver driver;
 
 	public Driver() {
 		
@@ -49,7 +49,6 @@ public class Driver {
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Integer.parseInt(ReadPropertyFile.get("WaitTime")), TimeUnit.SECONDS);
-		EventHandlerInit();
 		driver.get(ReadPropertyFile.get("url"));
 		driver.manage().deleteAllCookies();
 	}
@@ -65,11 +64,5 @@ public class Driver {
 		}
 	}
 
-	private static void EventHandlerInit() {
-		EventFiringWebDriver eventhandle = new EventFiringWebDriver(driver);
-		EventCapture capture = new EventCapture();
-		eventhandle.register(capture);
-		driver = eventhandle;
-	}
-
+	
 }
